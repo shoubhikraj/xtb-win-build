@@ -1,5 +1,5 @@
 # xtb-win-build
-Aims to provide precompiled binaries for xTB, xtb4stda and stda softwares developed by Grimme group. The softwares are natively compiled with Intel C/C++ and Intel Fortran v2021.4 compilers. You also need meson for xTB4sTDA and sTDA softwares. CMake is also required, it is provided by the Visual Studio or Visual Studio build tools.
+Aims to provide precompiled binaries for xTB, xtb4stda and stda softwares developed by Grimme group. The softwares are natively compiled with Intel C/C++ and Intel Fortran v2021.4 compilers. You also need meson for xTB4sTDA and sTDA softwares. CMake is also required, it is provided by the Visual Studio or Visual Studio build tools. The built executables are found in the release section.
 
 ## Method to build xTB
 
@@ -29,6 +29,8 @@ CMAKE_Fortran_FLAGS_RELEASE:STRING=/O3 /DNDEBUG
 7. Then run `cd build_intel`, and finally `nmake`
 
 The full build (including test modules) will not finish, but the xTB compilation will finish. This means the `xtb.exe` will be available. Simply copy that to the directory you want, and also copy the parameter files, which have the name `param` at the beginning. The above is a very hacky way of compiling, but unfortunately this is the best I can write for now.
+
+One issue with the xTB binary is that it writes greek letters (UTF-8) which can not be displayed by the Windows console unless its code page is changed. I have made an experimental fix in the source code which solves this problem, but it has only been tested in Windows 10 and might show unusual behaviour in Windows XP, 7 or 8. The modified source code can be found in https://github.com/shoubhikraj/xtb. The experimental executables are also available in the release section.
 
 ## Method to build xtb4stda
 
