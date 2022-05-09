@@ -1,5 +1,5 @@
 # xtb-win-build
-Aims to provide precompiled binaries for xTB, xtb4stda and stda softwares developed by Grimme group. The softwares are natively compiled with Intel C/C++ and Intel Fortran v2021.4 compilers. You also need meson for xTB4sTDA and sTDA softwares. CMake is also required, it is provided by the Visual Studio or Visual Studio build tools. The built executables are found in the release section.
+Aims to provide precompiled binaries for xTB, xtb4stda and stda softwares developed by Grimme group. The softwares are natively compiled with Intel C/C++ and Intel Fortran v2021.4 compilers. You also need meson for xTB4sTDA and sTDA softwares. CMake is also required, it is provided by the Visual Studio or Visual Studio build tools, when they are installed. The built executables are found in the release section.
 
 ## Method to build xTB
 
